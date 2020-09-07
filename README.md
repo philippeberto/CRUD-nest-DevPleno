@@ -1,16 +1,16 @@
-"# Nest-CRUD-DevPleno"
+# Nest-CRUD-DevPleno
 
 Projeto do curso Fullstack Master - DevPleno para implementar um CRUD em typescript com nest no Node.js
 
-- Para iniciar o projeto
+## Para iniciar o projeto
 
-Instalando o nestjs
+- Instalando o nestjs
 
-npm install -g @nestjs/cli
+  npm install -g @nestjs/cli
 
-Iniciando o projeto
+- Iniciando o projeto
 
-nest new <nome-do-projeto>
+  nest new < nome-do-projeto >
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
