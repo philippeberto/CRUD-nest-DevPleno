@@ -1,11 +1,27 @@
-import { Controller, Get } from '@nestjs/common'
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common'
+import { Product } from './product.entity'
 import { ProductService } from './product.service'
 
 @Controller('products')
 export class ProductController {
-  constructor(private readonly productService: ProductService) {}
+  constructor(private readonly productService: ProductService) { }
   @Get()
-  async findAll(): Promise<any> {
+  async findAll(): Promise<Product[]> {
     return this.productService.findAll()
+  }
+
+  @Get(':id')
+  async findById(@Param('id') id: string): Promise<Product> {
+    return this.productService.findById(id)
+  }
+
+  @Post()
+  async create(@Body() product: Product): Promise<Product> {
+    return this.productService.create(product)
+  }
+
+  @Delete(':id')
+  async delete(@Param('id') id: string): Promise<Boolean> {
+    return this.productService.delete(id)
   }
 }
